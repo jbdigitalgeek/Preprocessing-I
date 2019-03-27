@@ -133,4 +133,35 @@ table {
 html,
 body {
   height: 100%;
+  font-size: 62.5%;
+}
+.container {
+  margin: 0 auto;
+  padding: 0.1%;
+  width: 100%;
+}
+.navcontainer nav {
+  background-color: lavender;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.navcontainer nav a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.landingcontainer {
+  background-color: lightcoral;
+}
+.landingcontainer .toplanding {
+  justify-content: space-evenly;
+  display: flex;
+  font-size: 1.6rem;
+}
+.landingcontainer .toplanding .titleheader {
+  border: 1px blue solid;
+  width: 48%;
 }

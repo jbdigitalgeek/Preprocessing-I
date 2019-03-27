@@ -141,6 +141,11 @@ body {
   padding: 0.1%;
   width: 100%;
 }
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+  }
+}
 .navcontainer nav {
   background-color: lavender;
   margin: 5px 0;
@@ -158,8 +163,14 @@ body {
 .landingcontainer {
   background-color: skyblue;
 }
+@media (max-width: 500px) {
+  .landingcontainer {
+    flex-wrap: wrap;
+  }
+}
 .landingcontainer .toplanding {
   display: flex;
+  flex-direction: column;
   border-top: 1px blue solid;
   border-bottom: 1px blue solid;
 }

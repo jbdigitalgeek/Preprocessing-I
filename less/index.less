@@ -166,7 +166,10 @@
 		.container {
 		    margin: 0 auto;
 		    padding: .1%;
-		    width: 100%;
+			width: 100%;
+			@media (max-width: 500px){
+				max-width: 500px;
+			}
 		}
 
 		.navcontainer {
@@ -188,12 +191,18 @@
 		}
 
 		.landingcontainer {
-		    background-color: skyblue;
+			background-color: skyblue;
+			@media (max-width: 500px){
+				flex-wrap: wrap;
+				
+			}
 
 		    .toplanding {
-		        display: flex;
+				display: flex;
+				flex-direction: column;
 		        border-top: 1px blue solid;
-		        border-bottom: 1px blue solid;
+				border-bottom: 1px blue solid;
+
 
 		        .titleheader {
 		            border-left: 1px blue solid;

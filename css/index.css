@@ -130,10 +130,11 @@ table {
 * {
   box-sizing: border-box;
 }
-html,
-body {
+@accentcolor :
+html, body {
   height: 100%;
   font-size: 62.5%;
+  font-family: sans-serif;
 }
 .container {
   margin: 0 auto;
@@ -147,21 +148,32 @@ body {
   justify-content: space-around;
 }
 .navcontainer nav a {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-decoration: none;
   display: flex;
-  width: 100%;
+  width: 90%;
+  margin: 1%;
   justify-content: center;
 }
 .landingcontainer {
-  background-color: lightcoral;
+  background-color: skyblue;
 }
 .landingcontainer .toplanding {
-  justify-content: space-evenly;
   display: flex;
-  font-size: 1.6rem;
+  border-top: 1px blue solid;
+  border-bottom: 1px blue solid;
 }
 .landingcontainer .toplanding .titleheader {
-  border: 1px blue solid;
-  width: 48%;
+  border-left: 1px blue solid;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+.landingcontainer .toplanding h1 {
+  font-size: 5rem;
+}
+.landingcontainer .toplanding h2 {
+  font-size: 2.5rem;
 }

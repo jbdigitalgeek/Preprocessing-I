@@ -52,11 +52,13 @@ table {
 * {
     box-sizing: border-box;
 }
-@pfontsizing: 1.6rem;
-
+//variables 
+@pfontsizing: 1.4rem;
+@accentcolor:
 html, body {
 	height: 100%;
 	font-size: 62.5%;
+	font-family: sans-serif;
 }
 
 .container {
@@ -74,20 +76,33 @@ html, body {
 			font-size: @pfontsizing;
 			text-decoration: none;
 			display:flex;
-			width: 100%;
+			width: 90%;
+			margin: 1%;
 			justify-content: center;
 		}
 	}
 }
 .landingcontainer {
-	background-color: lightcoral;
+	background-color: skyblue;
 	.toplanding{
-		justify-content: space-evenly;
 		display: flex;
-		font-size: @pfontsizing;
-		.titleheader{
-			border: 1px blue solid;
-			width: 48%;
+		border-top: 1px blue solid;
+		border-bottom: 1px blue solid;
+		.titleheader {
+			border-left: 1px blue solid;
+			display: flex;
+			flex-direction: column;
+			width: 80%;
+			align-items: center;
+			justify-content: center;
+		}
+		h1 {
+			font-size: 5rem;
+			
+		}
+		h2{
+
+			font-size: 2.5rem;
 		}
 	}
 }

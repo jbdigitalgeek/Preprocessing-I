@@ -1,7 +1,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+		v2.0 | 20110126
+		License: none (public domain)
+		*/
 html,
 body,
 div,
@@ -130,8 +130,8 @@ table {
 * {
   box-sizing: border-box;
 }
-@accentcolor :
-html, body {
+html,
+body {
   height: 100%;
   font-size: 62.5%;
   font-family: sans-serif;
@@ -176,4 +176,63 @@ html, body {
 }
 .landingcontainer .toplanding h2 {
   font-size: 2.5rem;
+}
+.cta {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  margin: 1%;
+}
+.cta button {
+  margin: 1%;
+  justify-content: center;
+  background-color: black;
+  color: skyblue;
+  width: 30%;
+  font-size: 2rem;
+}
+.middlecontent {
+  border-top: 1px blue solid;
+  display: flex;
+}
+.middlecontent .middlecontent1 {
+  font-size: 1.4rem;
+  width: 48%;
+}
+.middlecontent .middlecontent1 h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.middlecontent .middlecontent2 {
+  font-size: 1.4rem;
+  width: 48%;
+}
+.middlecontent .middlecontent2 .toollist h2 {
+  font-size: 2.6rem;
+}
+.middlecontent .middlecontent2 .toollist li {
+  border: 1px blue solid;
+  font-size: 2.2rem;
+}
+table {
+  margin: 5%;
+  width: 90%;
+}
+table th {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+table td,
+table th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+table td {
+  font-size: 1.6rem;
 }

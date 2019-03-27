@@ -1,299 +1,309 @@
-		// Is this working?
-		/* http://meyerweb.com/eric/tools/css/reset/ 
-		v2.0 | 20110126
-		License: none (public domain)
-		*/
+// Is this working?
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
 
-		html,
-		body,
-		div,
-		span,
-		applet,
-		object,
-		iframe,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6,
-		p,
-		blockquote,
-		pre,
-		a,
-		abbr,
-		acronym,
-		address,
-		big,
-		cite,
-		code,
-		del,
-		dfn,
-		em,
-		img,
-		ins,
-		kbd,
-		q,
-		s,
-		samp,
-		small,
-		strike,
-		strong,
-		sub,
-		sup,
-		tt,
-		var,
-		b,
-		u,
-		i,
-		center,
-		dl,
-		dt,
-		dd,
-		ol,
-		ul,
-		li,
-		fieldset,
-		form,
-		label,
-		legend,
-		table,
-		caption,
-		tbody,
-		tfoot,
-		thead,
-		tr,
-		th,
-		td,
-		article,
-		aside,
-		canvas,
-		details,
-		embed,
-		figure,
-		figcaption,
-		footer,
-		header,
-		hgroup,
-		menu,
-		nav,
-		output,
-		ruby,
-		section,
-		summary,
-		time,
-		mark,
-		audio,
-		video {
-		    margin: 0;
-		    padding: 0;
-		    border: 0;
-		    font-size: 100%;
-		    font: inherit;
-		    vertical-align: baseline;
-		}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
-		/* HTML5 display-role reset for older browsers */
-		article,
-		aside,
-		details,
-		figcaption,
-		figure,
-		footer,
-		header,
-		hgroup,
-		menu,
-		nav,
-		section {
-		    display: block;
-		}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
 
-		body {
-		    line-height: 1;
-		}
+body {
+    line-height: 1;
+}
 
-		ol,
-		ul {
-		    list-style: none;
-		}
+ol,
+ul {
+    list-style: none;
+}
 
-		blockquote,
-		q {
-		    quotes: none;
-		}
+blockquote,
+q {
+    quotes: none;
+}
 
-		blockquote:before,
-		blockquote:after,
-		q:before,
-		q:after {
-		    content: '';
-		    content: none;
-		}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
 
-		table {
-		    border-collapse: collapse;
-		    border-spacing: 0;
-		}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
-		/* Set every element's box-sizing to border-box */
-		* {
-		    box-sizing: border-box;
-		}
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
 
-		// mixins
-		.centerbtn () {
-		    padding: 1%;
-		    border-radius: 1%;
-		    text-align: center;
-		}
+// mixins
+.centerbtn () {
+    padding: 1%;
+    border-radius: 1%;
+    text-align: center;
+}
 
-		.justifycenter() {
-		    justify-content: center;
-		}
+.justifycenter() {
+    justify-content: center;
+}
 
-		//variables 
-		@pfontsizing: 1.4rem;
-		@accentcolor: skyblue;
+//variables 
+@pfontsizing: 1.4rem;
+@accentcolor: skyblue;
 
 
-		html,
-		body {
-		    height: 100%;
-		    font-size: 62.5%;
-		    font-family: sans-serif;
-		}
+html,
+body {
+    height: 100%;
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
 
-		.container {
-		    margin: 0 auto;
-		    padding: .1%;
+.container {
+    margin: 0 auto;
+    padding: .1%;
+    width: 100%;
+
+}
+
+.navcontainer {
+    nav {
+        background-color: lavender;
+        margin: 5px 0;
+        display: flex;
+        justify-content: space-around;
+
+        a {
+            font-size: @pfontsizing;
+            text-decoration: none;
+            display: flex;
+            width: 90%;
+            margin: 1%;
+            .justifycenter;
+        }
+    }
+}
+
+.landingcontainer {
+    background-color: skyblue;
+
+
+}
+
+.toplanding {
+    @media (max-width: 500px) {
+        flex-direction: column;
+    }
+
+    display: flex;
+    border-top: 1px blue solid;
+    border-bottom: 1px blue solid;
+
+
+    .titleheader {
+        border-left: 1px blue solid;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+        .justifycenter;
+    }
+
+    h1 {
+        font-size: 5rem;
+
+    }
+
+    h2 {
+
+        font-size: 2.5rem;
+    }
+}
+
+.cta {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: @pfontsizing;
+    margin: 1%;
+
+    button {
+        margin: 1%;
+        .justifycenter;
+        background-color: black;
+        color: @accentcolor;
+        width: 30%;
+		font-size: 2rem;
+		border-radius: 10px;
+		@media (max-width: 500px){
 			width: 100%;
-			@media (max-width: 500px){
-				max-width: 500px;
-			}
+			padding: 5%;
 		}
+    }
+}
 
-		.navcontainer {
-		    nav {
-		        background-color: lavender;
-		        margin: 5px 0;
-		        display: flex;
-		        justify-content: space-around;
+.middlecontent {
+    border-top: 1px blue solid;
+    display: flex;
 
-		        a {
-		            font-size: @pfontsizing;
-		            text-decoration: none;
-		            display: flex;
-		            width: 90%;
-		            margin: 1%;
-		            .justifycenter;
-		        }
-		    }
-		}
+    .middlecontent1 {
+        font-size: @pfontsizing;
+        width: 48%;
 
-		.landingcontainer {
-			background-color: skyblue;
-			@media (max-width: 500px){
-				flex-wrap: wrap;
-				
-			}
+        h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
 
-		    .toplanding {
-				display: flex;
-				flex-direction: column;
-		        border-top: 1px blue solid;
-				border-bottom: 1px blue solid;
+    .middlecontent2 {
+        font-size: @pfontsizing;
+        width: 48%;
+
+        h2 {
+            font-size: 2.6rem;
+
+        }
 
 
-		        .titleheader {
-		            border-left: 1px blue solid;
-		            display: flex;
-		            flex-direction: column;
-		            width: 80%;
-		            align-items: center;
-		            .justifycenter;
-		        }
+        .toollist {
 
-		        h1 {
-		            font-size: 5rem;
 
-		        }
+            li {
+                border-radius: 5px;
+                border: 1px blue solid;
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
 
-		        h2 {
+table {
+    margin: 5%;
+    width: 90%;
 
-		            font-size: 2.5rem;
-		        }
-		    }
-		}
+    th {
+        font-size: 2rem;
+        font-weight: bolder;
+    }
 
-		.cta {
-		    align-items: center;
-		    display: flex;
-		    flex-direction: column;
-		    font-size: @pfontsizing;
-		    margin: 1%;
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
 
-		    button {
-		        margin: 1%;
-		        .justifycenter;
-		        background-color: black;
-		        color: @accentcolor;
-		        width: 30%;
-		        font-size: 2rem;
-		    }
-		}
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
 
-		.middlecontent {
-		    border-top: 1px blue solid;
-		    display: flex;
-
-		    .middlecontent1 {
-		        font-size: @pfontsizing;
-		        width: 48%;
-
-		        h2 {
-		            font-size: 2.5rem;
-		            font-weight: bold;
-		            text-decoration: underline;
-		        }
-		    }
-
-		    .middlecontent2 {
-		        font-size: @pfontsizing;
-		        width: 48%;
-
-		        .toollist {
-		            h2 {
-		                font-size: 2.6rem;
-		            }
-
-		            li {
-		                border: 1px blue solid;
-		                font-size: 2.2rem;
-		            }
-		        }
-		    }
-		}
-
-		table {
-			margin: 5%;
-			width: 90%;
-		    th {
-				font-size: 2rem;
-				font-weight: bolder;
-		    }
-
-		    td,
-		    th {
-		        border: 1px solid #dddddd;
-		        text-align: center;
-		        padding: 8px;
-		    }
-
-		    tr:nth-child(even) {
-		        background-color: #dddddd;
-		    }
-
-		    td {
-		        font-size: 1.6rem;
-		    }
-		}
+    td {
+        font-size: 1.6rem;
+    }
+}

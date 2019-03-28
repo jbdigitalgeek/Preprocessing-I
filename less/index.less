@@ -195,14 +195,15 @@ body {
 }
 
 .toplanding {
-    @media (max-width: 500px) {
-        flex-direction: column;
-    }
+
 
     display: flex;
     border-top: 1px blue solid;
     border-bottom: 1px blue solid;
 
+    @media (max-width: 500px) {
+        flex-direction: column;
+    }
 
     .titleheader {
         border-left: 1px blue solid;
@@ -237,12 +238,13 @@ body {
         background-color: black;
         color: @accentcolor;
         width: 30%;
-		font-size: 2rem;
-		border-radius: 10px;
-		@media (max-width: 500px){
-			width: 100%;
-			padding: 5%;
-		}
+        font-size: 2rem;
+        border-radius: 10px;
+
+        @media (max-width: 500px) {
+            width: 100%;
+            padding: 5%;
+        }
     }
 }
 

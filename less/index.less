@@ -1,51 +1,138 @@
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
@@ -53,7 +140,172 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+// mixins
+.centerbtn () {
+    padding: 1%;
+    border-radius: 1%;
+    text-align: center;
 }
 
+.justifycenter() {
+    justify-content: center;
+}
+
+//variables 
+@pfontsizing: 1.4rem;
+@accentcolor: skyblue;
+
+
+html,
+body {
+    height: 100%;
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: .1%;
+    width: 100%;
+
+}
+
+.navcontainer {
+    nav {
+        background-color: lavender;
+        margin: 5px 0;
+        display: flex;
+        justify-content: space-around;
+
+        a {
+            font-size: @pfontsizing;
+            text-decoration: none;
+            display: flex;
+            width: 90%;
+            margin: 1%;
+            .justifycenter;
+        }
+    }
+}
+
+.landingcontainer {
+    background-color: skyblue;
+
+
+}
+
+.toplanding {
+
+
+    display: flex;
+    border-top: 1px blue solid;
+    border-bottom: 1px blue solid;
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+    }
+
+    .titleheader {
+        border-left: 1px blue solid;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+        .justifycenter;
+    }
+
+    h1 {
+        font-size: 5rem;
+
+    }
+
+    h2 {
+
+        font-size: 2.5rem;
+    }
+}
+
+.cta {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: @pfontsizing;
+    margin: 1%;
+
+    button {
+        margin: 1%;
+        .justifycenter;
+        background-color: black;
+        color: @accentcolor;
+        width: 30%;
+        font-size: 2rem;
+        border-radius: 10px;
+
+        @media (max-width: 500px) {
+            width: 100%;
+            padding: 5%;
+        }
+    }
+}
+
+.middlecontent {
+    border-top: 1px blue solid;
+    display: flex;
+
+    .middlecontent1 {
+        font-size: @pfontsizing;
+        width: 48%;
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+
+    .middlecontent2 {
+        font-size: @pfontsizing;
+        width: 48%;
+
+        h2 {
+            font-size: 2.6rem;
+
+        }
+
+
+        .toollist {
+
+
+            li {
+                border-radius: 5px;
+                border: 1px blue solid;
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+
+table {
+    margin: 5%;
+    width: 90%;
+
+    th {
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    td {
+        font-size: 1.6rem;
+    }
+}
